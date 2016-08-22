@@ -21,7 +21,7 @@ public class ReentrantLockUtil {
         Log.i(TAG, "进入等待状态..." + count);
         condition.await();
         try {
-            for (int i = 0; i < 1000; i++) {
+            for (int i = 0; i < 500; i++) {
                 count++;
 
                 Log.i(TAG, "================ " + count);
@@ -40,7 +40,7 @@ public class ReentrantLockUtil {
 
         condition.signal();
         try {
-            for (int i = 0; i < 1000; i++) {
+            for (int i = 0; i < 600; i++) {
                 count++;
                 Log.i(TAG, "**************** " + count);
             }
